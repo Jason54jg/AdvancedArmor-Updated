@@ -96,6 +96,7 @@ public class AdvancedArmor extends JavaPlugin {
             }
         }
     }
+
     private void registerRevEnchants() {
         if (getServer().getPluginManager().getPlugin("RevEnchants") != null) {
             if (getConfig().getBoolean("Token-Armor.Economy-Dependencies.RevEnchants-Enabled")) {
