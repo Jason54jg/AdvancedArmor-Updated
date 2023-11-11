@@ -14,6 +14,7 @@ Money-Armor:
   Economy-Dependencies:
     Essentials-Enabled: false
     ShopGUIPlus-Enabled: false
+    X-Prison-Enabled: false
     UltraBackpacks-Enabled: false
     ClipAutoSell-Enabled: false
     DeluxeSellWands-Enabled: false
@@ -26,10 +27,12 @@ Coin-Armor:
     TMMobcoins-Enabled: false
 Token-Armor:
   Economy-Dependencies:
+    X-Prison-Enabled: false
     DeluxeSellWands-Enabled: false
     RevEnchants-Enabled: false
 Gem-Armor:
   Economy-Dependencies:
+    X-Prison-Enabled: false
     RevEnchants-Enabled: false
 Translations:
   Helmet: 'Helmet'

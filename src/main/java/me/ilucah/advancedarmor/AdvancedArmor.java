@@ -41,6 +41,7 @@ public class AdvancedArmor extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new SkullPlaceListener(), this);
         registerEssentials();
         registerShopGUIPlus();
+        registerXPrisonCore();
         registerSuperMobCoins();
         registerClipAutoSell();
         registerDeluxeSellWandsMoney();
@@ -79,6 +80,22 @@ public class AdvancedArmor extends JavaPlugin {
         }
     }
 
+    private void registerXPrisonCore() {
+        if (getServer().getPluginManager().getPlugin("X-Prison") != null) {
+            if (getConfig().getBoolean("Money-Armor.Economy-Dependencies.X-Prison-Enabled")) {
+                new XPCMoneyProvider(this);
+                getLogger().info("Successfully hooked into X-Prison MoneyAPI");
+            }
+            if (getConfig().getBoolean("Token-Armor.Economy-Dependencies.X-Prison-Enabled")) {
+                new XPCTokenProvider(this);
+                getLogger().info("Successfully hooked into X-Prison TokenAPI");
+            }
+            if (getConfig().getBoolean("Gem-Armor.Economy-Dependencies.X-Prison-Enabled")) {
+                new XPCGemProvider(this);
+                getLogger().info("Successfully hooked into X-Prison GemAPI");
+            }
+        }
+    }
     private void registerRevEnchants() {
         if (getServer().getPluginManager().getPlugin("RevEnchants") != null) {
             if (getConfig().getBoolean("Token-Armor.Economy-Dependencies.RevEnchants-Enabled")) {

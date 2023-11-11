@@ -6,7 +6,7 @@ authors: [ iLucaH ]
 description: An advanced armor plugin for adding extra depth to your minecraft server
 depend:
   - NBTAPI
-softdepend: [ PlaceholderAPI, Essentials, ShopGUIPlus, SuperMobCoins, AutoSell, TMMobcoins, RevEnchants, WildTools ]
+softdepend: [ PlaceholderAPI, Essentials, ShopGUIPlus, SuperMobCoins, X-Prison, AutoSell, TMMobcoins, RevEnchants, WildTools ]
 commands:
   armor:
     description: Main hub command to manage Cusom Armor
